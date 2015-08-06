@@ -24,17 +24,17 @@
 include device/samsung/matisse-common/BoardConfigCommon.mk
 
 # inherit from the proprietary version
--include vendor/samsung/matissewifi/BoardConfigVendor.mk
+-include vendor/samsung/matisselte/BoardConfigVendor.mk
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := matissewifi,matissewifixx,530,SM-T530
+TARGET_OTA_ASSERT_DEVICE := matisselte,matisseltexx,535,SM-T535
 
 # Board
-TARGET_BOARD_INFO_FILE := device/samsung/matissewifi/board-info.txt
+TARGET_BOARD_INFO_FILE := device/samsung/matisselte/board-info.txt
 
-BOARD_CUSTOM_BOOTIMG_MK := device/samsung/matissewifi/mkbootimg.mk
-#TARGET_KERNEL_VARIANT_CONFIG := msm8226-sec_matissewifi_defconfig
+BOARD_CUSTOM_BOOTIMG_MK := device/samsung/matisselte/mkbootimg.mk
+TARGET_KERNEL_CONFIG := matisselte_defconfig
 
 # Releasetools
-TARGET_RELEASETOOLS_EXTENSIONS := device/samsung/matissewifi
+TARGET_RELEASETOOLS_EXTENSIONS := device/samsung/matisselte
 

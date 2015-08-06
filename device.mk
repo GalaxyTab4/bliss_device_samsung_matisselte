@@ -15,10 +15,10 @@
 #
 
 # Get non-open-source specific aspects if available
-$(call inherit-product-if-exists, vendor/samsung/matissewifi/matissewifi-vendor.mk)
+$(call inherit-product-if-exists, vendor/samsung/matisselte/matisselte-vendor.mk)
 
 # Overlay
-DEVICE_PACKAGE_OVERLAYS += device/samsung/matissewifi/overlay
+DEVICE_PACKAGE_OVERLAYS += device/samsung/matisselte/overlay
 
 # Ramdisk
 PRODUCT_PACKAGES += \
