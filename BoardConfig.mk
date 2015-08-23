@@ -22,6 +22,9 @@ TARGET_BOARD_INFO_FILE := device/samsung/matisselte/board-info.txt
 
 LOCAL_PATH := device/samsung/matisselte
 
+# ART
+ART_USE_HSPACE_COMPACT := true
+
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(LOCAL_PATH)/bluetooth
 
