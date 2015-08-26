@@ -1,6 +1,6 @@
-# System.prop for matisse3g
-ro.product.device=matisse3g
-ro.product.model=SM-T531
+# System.prop for matisselte
+ro.product.device=matisselte
+ro.product.model=SM-T535
 
 # RIL
 rild.libpath=/system/lib/libsec-ril.so

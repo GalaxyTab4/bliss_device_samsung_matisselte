@@ -16,11 +16,11 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit from s3ve3g device
-$(call inherit-product, device/samsung/matisse3g/device.mk)
+$(call inherit-product, device/samsung/matisselte/device.mk)
 
 # Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := matisse3g
-PRODUCT_NAME := full_matisse3g
+PRODUCT_DEVICE := matisselte
+PRODUCT_NAME := full_matisselte
 PRODUCT_BRAND := samsung
-PRODUCT_MODEL := SM-T531
+PRODUCT_MODEL := SM-T535
 PRODUCT_MANUFACTURER := samsung
