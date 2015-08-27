@@ -17,6 +17,9 @@
 
 TARGET_OTA_ASSERT_DEVICE := matisselte
 
+# Board
+TARGET_BOARD_INFO_FILE := device/samsung/matisselte/board-info.txt
+
 LOCAL_PATH := device/samsung/matisselte
 
 # Bluetooth
