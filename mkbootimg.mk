@@ -6,16 +6,17 @@ LOCAL_PATH := $(call my-dir)
 
 ## Imported from the original makefile...
 KERNEL_CONFIG := $(KERNEL_OUT)/.config
-MSM8926_DTS_NAMES := MSM8926
+MSM8926_DTS_NAMES := msm8926
 
 MSM8926_DTS_FILES = $(wildcard $(TOP)/$(TARGET_KERNEL_SOURCE)/arch/arm/boot/dts/msm8926-sec-matisselte-*.dts)
 MSM8926_DTS_FILE = $(lastword $(subst /, ,$(1)))
 DTB_FILE = $(addprefix $(KERNEL_OUT)/arch/arm/boot/,$(patsubst %.dts,%.dtb,$(call MSM8926_DTS_FILE,$(1))))
+DTB_FILE = device/samsung/matissewifi/dt.img
 ZIMG_FILE = $(addprefix $(KERNEL_OUT)/arch/arm/boot/,$(patsubst %.dts,%-zImage,$(call MSM8926_DTS_FILE,$(1))))
 KERNEL_ZIMG = $(KERNEL_OUT)/arch/arm/boot/zImage
 DTC = $(KERNEL_OUT)/scripts/dtc/dtc
 
-define append-MSM8926-dtb
+define append-msm8926-dtb
 mkdir -p $(KERNEL_OUT)/arch/arm/boot;\
 $(foreach MSM8926_DTS_NAME, $(MSM8926_DTS_NAMES), \
    $(foreach d, $(MSM8926_DTS_FILES), \
@@ -30,7 +31,7 @@ INSTALLED_DTIMAGE_TARGET := $(PRODUCT_OUT)/dt.img
 
 $(INSTALLED_DTIMAGE_TARGET): $(DTBTOOL) $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr $(INSTALLED_KERNEL_TARGET)
 	@echo -e ${CL_CYN}"Start DT image: $@"${CL_RST}
-	$(call append-MSM8926-dtb)
+	$(call append-msm8926-dtb)
 	$(call pretty,"Target dt image: $(INSTALLED_DTIMAGE_TARGET)")
 	$(hide) $(DTBTOOL) -o $(INSTALLED_DTIMAGE_TARGET) -s $(BOARD_KERNEL_PAGESIZE) -p $(KERNEL_OUT)/scripts/dtc/ $(KERNEL_OUT)/arch/arm/boot/
 	@echo -e ${CL_CYN}"Made DT image: $@"${CL_RST}
