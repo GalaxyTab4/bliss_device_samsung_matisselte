@@ -56,6 +56,9 @@ persist.data.netmgrd.qos.enable=false
 persist.radio.add_power_save=1
 ro.use_data_netmgrd=false
 
+# Scheduler
+sys.io.scheduler=row
+
 # Sensors
 ro.qc.sdk.gestures.camera=false
 ro.qc.sdk.camera.facialproc=false
@@ -65,4 +68,4 @@ ro.qc.sdk.sensors.gestures=true
 wifi.interface=wlan0
 
 # OTA Updates
-ro.ota.manifest=http://android.comtek-wiebe.de/BlissPop/sm-t530/ota/ota4.xml
+ro.ota.manifest=http://android.comtek-wiebe.de/BlissPop/sm-t535/ota/ota4.xml
