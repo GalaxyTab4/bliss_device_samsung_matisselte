@@ -72,6 +72,8 @@ TARGET_RELEASETOOLS_EXTENSIONS := device/samsung/matisselte
 Bliss_Build_Block := 1
 
 # BlissPop Configs
+BLISS_BUILDTYPE := OFFICIAL
+BLISS_DEVELOPER := SUB77
 BLISS_WIPE_CACHES := 0
 BLISSIFY := true
 BLISS_O3 := true
